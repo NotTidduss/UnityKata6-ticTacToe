@@ -212,9 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b173d6d7649e03c4f80435c90a52f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  mark: 0
-  isMarked: 0
+  master: {fileID: 1545324695}
 --- !u!114 &62739897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,8 +258,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 62739896}
-        m_TargetAssemblyTypeName: Square, Assembly-CSharp
-        m_MethodName: setAsMarked
+        m_TargetAssemblyTypeName: TTT_Square, Assembly-CSharp
+        m_MethodName: btnSetAsMarked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -540,9 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b173d6d7649e03c4f80435c90a52f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  mark: 0
-  isMarked: 0
+  master: {fileID: 1545324695}
 --- !u!114 &243373087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,9 +583,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243373086}
-        m_TargetAssemblyTypeName: Square, Assembly-CSharp
-        m_MethodName: setAsMarked
+      - m_Target: {fileID: 62739896}
+        m_TargetAssemblyTypeName: TTT_Square, Assembly-CSharp
+        m_MethodName: btnSetAsMarked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -609,7 +605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 399173291}
   m_Layer: 5
-  m_Name: ResultsScreen
+  m_Name: ResultMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,9 +716,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1545324695}
-        m_TargetAssemblyTypeName: Master, Assembly-CSharp
-        m_MethodName: playAgain
+      - m_Target: {fileID: 905556563}
+        m_TargetAssemblyTypeName: TTT_UI, Assembly-CSharp
+        m_MethodName: btnPlayAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -859,9 +855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b173d6d7649e03c4f80435c90a52f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  mark: 0
-  isMarked: 0
+  master: {fileID: 1545324695}
 --- !u!114 &602005393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -906,9 +900,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 602005392}
-        m_TargetAssemblyTypeName: Square, Assembly-CSharp
-        m_MethodName: setAsMarked
+      - m_Target: {fileID: 62739896}
+        m_TargetAssemblyTypeName: TTT_Square, Assembly-CSharp
+        m_MethodName: btnSetAsMarked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1009,7 +1003,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &715799583
 GameObject:
@@ -1099,6 +1093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 905556562}
+  - component: {fileID: 905556563}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1119,8 +1114,26 @@ Transform:
   m_Children:
   - {fileID: 94872138}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905556563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905556561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 594af28ea8410164fa4e4bbf822c8f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  master: {fileID: 1545324695}
+  resultMenu: {fileID: 399173290}
+  resultsText: {fileID: 1490832561}
+  winSumText: {fileID: 715799585}
+  lossSumText: {fileID: 154004179}
+  drawSumText: {fileID: 1246633519}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &983692504
 GameObject:
@@ -1293,9 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b173d6d7649e03c4f80435c90a52f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  mark: 0
-  isMarked: 0
+  master: {fileID: 1545324695}
 --- !u!114 &983692509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,9 +1351,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 983692508}
-        m_TargetAssemblyTypeName: Square, Assembly-CSharp
-        m_MethodName: setAsMarked
+      - m_Target: {fileID: 62739896}
+        m_TargetAssemblyTypeName: TTT_Square, Assembly-CSharp
+        m_MethodName: btnSetAsMarked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1520,9 +1531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b173d6d7649e03c4f80435c90a52f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  mark: 0
-  isMarked: 0
+  master: {fileID: 1545324695}
 --- !u!114 &1222147677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,9 +1576,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1222147676}
-        m_TargetAssemblyTypeName: Square, Assembly-CSharp
-        m_MethodName: setAsMarked
+      - m_Target: {fileID: 62739896}
+        m_TargetAssemblyTypeName: TTT_Square, Assembly-CSharp
+        m_MethodName: btnSetAsMarked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1747,9 +1756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b173d6d7649e03c4f80435c90a52f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  mark: 0
-  isMarked: 0
+  master: {fileID: 1545324695}
 --- !u!114 &1328260142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,9 +1801,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1328260141}
-        m_TargetAssemblyTypeName: Square, Assembly-CSharp
-        m_MethodName: setAsMarked
+      - m_Target: {fileID: 62739896}
+        m_TargetAssemblyTypeName: TTT_Square, Assembly-CSharp
+        m_MethodName: btnSetAsMarked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1889,6 +1896,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336512719}
   m_CullTransparentMesh: 1
+--- !u!1 &1385177519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1385177520}
+  - component: {fileID: 1385177521}
+  m_Layer: 0
+  m_Name: System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1385177520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385177519}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1385177521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385177519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21beb0a6614ac8d4faa0b9a000c8ebb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ttt_scene: 1x_TicTacToe
+  player1MarkSprite: {fileID: 21300000, guid: e00d1deb3af05534bbaa131ca44ae8b1, type: 3}
+  player2MarkSprite: {fileID: 21300000, guid: 1aef6233b0fc8104fbd3e49534149eb7, type: 3}
 --- !u!1 &1388582840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,9 +2031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b173d6d7649e03c4f80435c90a52f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  mark: 0
-  isMarked: 0
+  master: {fileID: 1545324695}
 --- !u!114 &1388582845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2025,9 +2076,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1388582844}
-        m_TargetAssemblyTypeName: Square, Assembly-CSharp
-        m_MethodName: setAsMarked
+      - m_Target: {fileID: 62739896}
+        m_TargetAssemblyTypeName: TTT_Square, Assembly-CSharp
+        m_MethodName: btnSetAsMarked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2229,7 +2280,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1545324695
 MonoBehaviour:
@@ -2243,8 +2294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43a71ba4e995e443aa8285b849c7710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markO: {fileID: 21300000, guid: e00d1deb3af05534bbaa131ca44ae8b1, type: 3}
-  markX: {fileID: 21300000, guid: 1aef6233b0fc8104fbd3e49534149eb7, type: 3}
+  sys: {fileID: 1385177521}
+  ui: {fileID: 905556563}
   squares:
   - {fileID: 62739896}
   - {fileID: 1328260141}
@@ -2256,11 +2307,6 @@ MonoBehaviour:
   - {fileID: 1929158342}
   - {fileID: 243373086}
   cam: {fileID: 963194227}
-  resultScreen: {fileID: 399173290}
-  resultsText: {fileID: 1490832561}
-  winSumText: {fileID: 715799585}
-  lossSumText: {fileID: 154004179}
-  drawSumText: {fileID: 1246633519}
 --- !u!1 &1734787936
 GameObject:
   m_ObjectHideFlags: 0
@@ -2389,9 +2435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b173d6d7649e03c4f80435c90a52f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  mark: 0
-  isMarked: 0
+  master: {fileID: 1545324695}
 --- !u!114 &1741109781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2436,9 +2480,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1741109780}
-        m_TargetAssemblyTypeName: Square, Assembly-CSharp
-        m_MethodName: setAsMarked
+      - m_Target: {fileID: 62739896}
+        m_TargetAssemblyTypeName: TTT_Square, Assembly-CSharp
+        m_MethodName: btnSetAsMarked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2537,9 +2581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b173d6d7649e03c4f80435c90a52f981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  mark: 0
-  isMarked: 0
+  master: {fileID: 1545324695}
 --- !u!114 &1929158343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2584,9 +2626,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1929158342}
-        m_TargetAssemblyTypeName: Square, Assembly-CSharp
-        m_MethodName: setAsMarked
+      - m_Target: {fileID: 62739896}
+        m_TargetAssemblyTypeName: TTT_Square, Assembly-CSharp
+        m_MethodName: btnSetAsMarked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2660,5 +2702,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
