@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/0x_TicTacToe_Init.unity
     guid: 06b4af1b17b99164a80fc8282ed0e8ce
   - enabled: 1
-    path: Assets/Scenes/1x_TicTacToe.unity
+    path: Assets/Scenes/1x_TicTacToe_Game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
